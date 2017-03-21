@@ -5,6 +5,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { AgmCoreModule } from 'angular2-google-maps/core';
+
+import 'hammerjs';
+
+import { MaterialModule } from '@angular/material';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +18,11 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDGF4oSwQ8fBUX7ikPRcWJwyPn29tcui7o'
+    }),
+    MaterialModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
